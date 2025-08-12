@@ -1,0 +1,13 @@
+<div class="flex flex-col justify-start">
+  <p>Counter: {{ counter }}</p>
+  <p>Signal Counter: {{ counterSignal() }}</p>
+  <div>
+    <button (click)="increaseBy(3)">Aumentar</button>
+  </div>
+  <div>
+    <button (click)="decreaseBy(3)">Decrease</button>
+  </div>
+  <div>
+    <button (click)="resetCounter(3)">Reset</button>
+  </div>
+</div>

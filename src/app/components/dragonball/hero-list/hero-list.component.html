@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-3">
+  <p>{{ title() }}</p>
+  <ol>
+    @for (hero of heroes(); track hero.id; let idx = $index){ @if (hero.power >
+    9000) {
+    <li>
+      <div class="flex gap-5">
+        <p
+          [class.text-red-500]="hero.power > 9000"
+          [class.text-green-500]="hero.power < 9000"
+        >
+          {{ hero.power }}
+        </p>
+        <span>{{ idx }} - {{ hero.name }}</span>
+      </div>
+    </li>
+    } @else{
+    <p>No es fuerte</p>
+    }}
+  </ol>
+</div>

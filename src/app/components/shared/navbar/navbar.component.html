@@ -1,0 +1,24 @@
+<nav>
+  <!-- para evitar repeticion de tailwind css clases pasar esto a un componente despues tambien -->
+  <a
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/counter"
+    routerLinkActive="active"
+    class="text-blue-400 [&.active]:text-green-500"
+    >Counter</a
+  >
+  <a
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/hero"
+    routerLinkActive="active"
+    class="text-blue-400 [&.active]:text-green-500"
+    >Hero</a
+  >
+  <a
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/dragonball"
+    routerLinkActive="active"
+    class="text-blue-400 [&.active]:text-green-500"
+    >Dragonball</a
+  >
+</nav>

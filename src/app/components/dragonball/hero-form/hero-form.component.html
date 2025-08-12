@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-5">
+  <p>Add hero: {{ nameSignal() }}</p>
+  <p>Power hero: {{ powerSignal() }}</p>
+  <input
+    [value]="nameSignal()"
+    (input)="nameSignal.set(refName.value)"
+    type="text"
+    placeholder="name"
+    #refName
+  />
+  <input
+    [value]="powerSignal()"
+    (input)="powerSignal.set(refPower.valueAsNumber)"
+    type="number"
+    placeholder="power"
+    #refPower
+  />
+  <button (click)="addHero()">Add Hero</button>
+</div>
